@@ -1,0 +1,29 @@
+<h1>{{ message }}</h1>
+<h1>{{ title }}</h1>
+<h3>{{ description }}</h3>
+<hr>
+
+
+<h3>Property Binding</h3>
+<img [src]="imageUrl" [width]="w" [height]="h" [alt]="altText">
+<hr>
+
+
+<h3>Style Binding</h3>
+<p [style.color]="textColor">This text is blue!</p>
+<hr>
+
+<h3>Class Binding</h3>
+<p [class.highlighted]="isHighlighted">This text is highlighted!</p>
+<hr>
+
+<h3>Two-Way Binding</h3>
+<p>Type below to see synchronization:</p>
+<input [(ngModel)]="yourName" placeholder="Enter your name">
+<p>Hello, {{ yourName }}!</p>
+<hr>
+
+<h3>Event Binding</h3>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<p>Count: {{ count }}</p>
