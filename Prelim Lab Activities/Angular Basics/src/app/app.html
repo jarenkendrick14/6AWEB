@@ -1,0 +1,70 @@
+<div class="cv-container">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h1 class="name">{{ name }}</h1>
+      <h2 class="title">{{ title }}</h2>
+    </div>
+    <div class="sidebar-section contact-info">
+      <h3>Contact Information</h3>
+      <ul>
+        <li><strong>Email:</strong> <span>{{ email }}</span></li>
+        <li><strong>Phone:</strong> <span>{{ phone }}</span></li>
+        <li><strong>Location:</strong> <span>{{ location }}</span></li>
+        <li><strong>LinkedIn:</strong> <span>{{ linkedin }}</span></li>
+        <li><strong>GitHub:</strong> <span>{{ github }}</span></li>
+      </ul>
+    </div>
+    <div class="sidebar-section key-skills">
+      <h3>Key Skills</h3>
+      <ul class="skills-list">
+        @for (skill of keySkills; track skill) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  </aside>
+
+
+  <main class="main-content">
+    <section class="profile-section">
+      <h2>Personal Profile</h2>
+      <p>{{ personalProfile }}</p>
+    </section>
+
+    <section class="proficiencies-section">
+      <h2>Technical Proficiencies</h2>
+      @for (proficiency of technicalProficiencies; track proficiency.category) {
+        <div class="proficiency-category">
+          <h4>{{ proficiency.category }}</h4>
+          <ul class="tech-list">
+            @for (skill of proficiency.skills; track skill) {
+              <li>{{ skill }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </section>
+
+    <section class="education-section">
+      <h2>Education</h2>
+      @for (edu of education; track edu.degree) {
+        <div class="entry">
+          <h3>{{ edu.degree }}</h3>
+          <p class="institution">{{ edu.institution }} | {{ edu.period }}</p>
+          <p>{{ edu.description }}</p>
+        </div>
+      }
+    </section>
+
+    <section class="projects-section">
+      <h2>Projects</h2>
+      @for (project of projects; track project.name) {
+        <div class="entry">
+          <h3>{{ project.name }}</h3>
+          <p class="technologies"><strong>Technologies:</strong> {{ project.technologies }}</p>
+          <p>{{ project.description }}</p>
+        </div>
+      }
+    </section>
+  </main>
+</div>

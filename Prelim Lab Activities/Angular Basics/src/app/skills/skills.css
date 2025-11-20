@@ -1,0 +1,30 @@
+.skills-list.vertical li {
+    background: linear-gradient(to right, rgba(130, 80, 223, 0.1), rgba(22, 198, 165, 0.1));
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-bright);
+    transition: 0.3s;
+}
+
+.skills-list.vertical li:hover {
+    border-color: var(--accent-violet);
+    transform: translateY(-2px);
+}
+
+.proficiency-category { margin-bottom: 1.5rem; }
+.proficiency-category h4 { color: var(--text-secondary); margin-bottom: 8px; font-size: 0.95rem; }
+
+.tech-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.tech-list li {
+    background-color: #161b22;
+    padding: 5px 15px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border: 1px solid transparent;
+}
+.tech-list li:hover { color: var(--text-bright); border-color: var(--accent-cyan); }

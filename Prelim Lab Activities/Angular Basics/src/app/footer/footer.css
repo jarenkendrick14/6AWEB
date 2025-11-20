@@ -1,0 +1,4 @@
+.institution { font-style: italic; color: var(--accent-cyan); margin-bottom: 5px; }
+.tech { color: var(--text-bright); margin-bottom: 5px; font-size: 0.9rem; }
+.entry { margin-bottom: 30px; }
+h2 { margin-top: 10px; }

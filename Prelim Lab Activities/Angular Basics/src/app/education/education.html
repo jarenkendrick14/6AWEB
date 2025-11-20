@@ -1,0 +1,16 @@
+<div class="cv-container">
+  <aside class="sidebar"></aside>
+
+  <main class="main-content">
+    <section class="education-section">
+      <h2>Education</h2>
+      @for (edu of education; track edu.degree) {
+        <div class="entry">
+          <h3>{{ edu.degree }}</h3>
+          <p class="institution">{{ edu.institution }} | {{ edu.period }}</p>
+          <p>{{ edu.description }}</p>
+        </div>
+      }
+    </section>
+  </main>
+</div>
