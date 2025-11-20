@@ -1,0 +1,16 @@
+<div class="cv-container">
+  <aside class="sidebar"></aside>
+
+  <main class="main-content">
+    <section class="projects-section">
+      <h2>Projects</h2>
+      @for (project of projects; track project.name) {
+        <div class="entry">
+          <h3>{{ project.name }}</h3>
+          <p class="technologies"><strong>Technologies:</strong> {{ project.technologies }}</p>
+          <p>{{ project.description }}</p>
+        </div>
+      }
+    </section>
+  </main>
+</div>
