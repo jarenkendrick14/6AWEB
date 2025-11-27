@@ -1,0 +1,55 @@
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px); /* Glass effect */
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #4f46e5; /* Primary color */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+/* This class is added automatically by Angular when the link is active */
+.nav-links a.active {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}

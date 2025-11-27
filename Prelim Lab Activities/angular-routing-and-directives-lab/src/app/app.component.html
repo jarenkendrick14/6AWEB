@@ -1,11 +1,23 @@
-<nav>
-  <ul>
-    <li><a routerLink="" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="data-binding" routerLinkActive="active">Data Binding</a></li>
-    <li><a routerLink="directives" routerLinkActive="active">Directives</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <span>Data Binding</span> and <span>Directives</span>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li>
+        <a routerLink="/data-binding" routerLinkActive="active">Data Binding</a>
+      </li>
+      <li>
+        <a routerLink="/directives" routerLinkActive="active">Directives</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-<hr>
-
-<router-outlet></router-outlet>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
