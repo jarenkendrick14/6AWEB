@@ -1,5 +1,9 @@
-/* Import Google Font 'Inter' for a professional tech look */
+/* Import Google Font 'Inter' - MUST BE FIRST */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Color Palette */
@@ -16,7 +20,6 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
-
   --radius: 12px;
 }
 
@@ -28,12 +31,11 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f1f5f9; /
+  background-color: #f1f5f9;
   color: #334155;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
 
 .container {
   max-width: 1000px;
@@ -41,12 +43,11 @@ body {
   padding: 2rem;
 }
 
-
 .card {
   background: var(--white);
   border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: --shadow-md;
+  box-shadow: var(--shadow-md);
   border: 1px solid #e2e8f0;
   margin-bottom: 2rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -56,7 +57,6 @@ body {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
-
 
 h1 {
   font-size: 2.25rem;
@@ -80,7 +80,6 @@ p {
   margin-bottom: 1rem;
 }
 
-
 input[type="text"], input[type="email"], input[type="number"] {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -97,7 +96,6 @@ input:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
-
 
 button {
   display: inline-flex;
@@ -123,7 +121,6 @@ button:hover {
 button:active {
   transform: translateY(0);
 }
-
 
 button.btn-secondary {
   background-color: white;

@@ -1,0 +1,226 @@
+/* =========================================
+   VARIABLES & THEME CONFIGURATION
+   ========================================= */
+:host {
+    --primary-color: #2563eb;       /* Royal Blue */
+    --primary-hover: #1d4ed8;       /* Darker Blue */
+    --bg-color: #f3f4f6;            /* Light Gray Background */
+    --card-bg: #ffffff;             /* White Cards */
+    --text-main: #111827;           /* Almost Black */
+    --text-secondary: #6b7280;      /* Muted Gray */
+    --border-color: #e5e7eb;        /* Light Border */
+    --success-bg: #d1fae5;          /* Light Green */
+    --success-text: #065f46;        /* Dark Green */
+    --info-bg: #eff6ff;             /* Light Blue */
+    --info-text: #1e40af;           /* Dark Blue */
+    --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    display: block;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    font-family: var(--font-stack);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   LAYOUT & CONTAINER
+   ========================================= */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.user-info {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* =========================================
+   CARDS / PANELS
+   ========================================= */
+.panel {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+    margin-bottom: 32px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+.panel-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* =========================================
+   TABLES (The Core Design)
+   ========================================= */
+.table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.925rem;
+}
+
+/* Header Styling */
+.data-table th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Body Styling */
+.data-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    color: #334155;
+    vertical-align: middle;
+}
+
+/* Hover Effects */
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Text Utilities inside Table */
+.fw-bold { font-weight: 600; color: #111827; }
+.text-secondary { color: #6b7280; font-size: 0.875rem; }
+.text-right { text-align: right; }
+.text-email { color: var(--primary-color); text-decoration: none; }
+.text-email:hover { text-decoration: underline; }
+
+/* Price Column Special Formatting */
+.price {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* =========================================
+   BADGES & BUTTONS
+   ========================================= */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Courier New', monospace; /* Technical look for IDs */
+}
+
+/* ID Badge Style */
+.id-badge {
+    background-color: var(--info-bg);
+    color: var(--info-text);
+    border: 1px solid rgba(30, 64, 175, 0.1);
+}
+
+.badge-count {
+    background-color: var(--border-color);
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.btn-action {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+.btn-action:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-color);
+}

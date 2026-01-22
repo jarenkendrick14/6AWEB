@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Required for ngModel
-import { CommonModule } from '@angular/common'; // Good practice to include
+ // Good practice to include
 
 @Component({
   selector: 'app-directives',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css'
 })
